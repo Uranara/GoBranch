@@ -1,0 +1,39 @@
+[GIN-debug] [WARNING] Creating an Engine instance with the Logger and Recovery middleware already attached.
+
+[GIN-debug] [WARNING] Running in "debug" mode. Switch to "release" mode in production.
+ - using env:	export GIN_MODE=release
+ - using code:	gin.SetMode(gin.ReleaseMode)
+
+[GIN-debug] GET    /assets/*filepath         --> github.com/gin-gonic/gin.(*RouterGroup).createStaticHandler.func1 (3 handlers)
+[GIN-debug] HEAD   /assets/*filepath         --> github.com/gin-gonic/gin.(*RouterGroup).createStaticHandler.func1 (3 handlers)
+[GIN-debug] Loaded HTML Templates (2): 
+	- 
+	- index.html
+
+[GIN-debug] GET    /                         --> Go/api.Index (3 handlers)
+[GIN-debug] GET    /add                      --> Go/api.Add (3 handlers)
+[GIN-debug] GET    /get                      --> Go/api.Find (3 handlers)
+[GIN-debug] GET    /delete                   --> Go/api.Delete (3 handlers)
+[GIN-debug] POST   /create                   --> Go/api.Create (3 handlers)
+[GIN-debug] [WARNING] You trusted all proxies, this is NOT safe. We recommend you to set a value.
+Please check https://pkg.go.dev/github.com/gin-gonic/gin#readme-don-t-trust-all-proxies for details.
+[GIN-debug] Listening and serving HTTP on :90
+[GIN] 2023/11/28 - 09:25:02 | 200 |      24.716ms |       127.0.0.1 | GET      "/"
+[GIN] 2023/11/28 - 09:25:08 | 302 |      7.5509ms |       127.0.0.1 | POST     "/create"
+[GIN] 2023/11/28 - 09:25:08 | 200 |     11.4283ms |       127.0.0.1 | GET      "/"
+[GIN] 2023/11/28 - 09:25:09 | 302 |      4.4926ms |       127.0.0.1 | POST     "/create"
+[GIN] 2023/11/28 - 09:25:09 | 200 |     11.7731ms |       127.0.0.1 | GET      "/"
+[GIN] 2023/11/28 - 09:25:10 | 302 |      4.8105ms |       127.0.0.1 | POST     "/create"
+[GIN] 2023/11/28 - 09:25:10 | 200 |     11.7496ms |       127.0.0.1 | GET      "/"
+[GIN] 2023/11/28 - 09:25:10 | 302 |      3.8546ms |       127.0.0.1 | POST     "/create"
+[GIN] 2023/11/28 - 09:25:10 | 200 |     11.4331ms |       127.0.0.1 | GET      "/"
+[GIN] 2023/11/28 - 09:25:34 | 200 |     12.9182ms |       127.0.0.1 | GET      "/"
+[GIN] 2023/11/28 - 09:25:35 | 302 |       4.087ms |       127.0.0.1 | POST     "/create"
+[GIN] 2023/11/28 - 09:25:35 | 200 |     11.5611ms |       127.0.0.1 | GET      "/"
+[GIN] 2023/11/28 - 09:25:36 | 302 |      4.6964ms |       127.0.0.1 | POST     "/create"
+[GIN] 2023/11/28 - 09:25:36 | 200 |      11.468ms |       127.0.0.1 | GET      "/"
+[GIN] 2023/11/28 - 09:25:37 | 302 |      4.4398ms |       127.0.0.1 | POST     "/create"
+[GIN] 2023/11/28 - 09:25:37 | 200 |     13.7973ms |       127.0.0.1 | GET      "/"
+[GIN] 2023/11/28 - 09:25:37 | 302 |      5.2503ms |       127.0.0.1 | POST     "/create"
+[GIN] 2023/11/28 - 09:25:37 | 200 |     13.0957ms |       127.0.0.1 | GET      "/"
+[GIN] 2023/11/28 - 09:29:35 | 200 |     13.8201ms |       127.0.0.1 | GET      "/"
