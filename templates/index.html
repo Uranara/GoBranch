@@ -1,42 +1,22 @@
 {{define "index.html"}}
-<html lang="zh">
-<head>
-    <meta charset="UTF-8">
-    <title>Title</title>
-    <link rel="stylesheet" href="../assets/css/bootstrap.css">
-    <script src="../assets/js/jquery.min.js"></script>
-    <script src="../assets/js/bootstrap.js"></script>
-    <script src="../assets/js/common.js"></script>
-    <script src="../assets/js/index.js"></script>
-    <script>
+{{template "header.html"}}
 
 
-    </script>
-
-    <style rel="stylesheet">
-        .form-check-input {
-            width: 20px;
-            height: 20px;
-        }
-
-        body {
-            height: 1800px;
-        }
-    </style>
-
-</head>
-
-<body>
-
-<div class="bs-example" data-example-id="simple-table">
-    <form action="/form" id="Form">
-        <div class="container">
+<div class="jumbotron jumbotron-fluid">
+    <div class="container">
+        <h1 class="display-6"> 唱大本sg敬拜fu和赞美zhu系列，即6-193首为范围，每周一首</h1>
+        <p class="lead">个人每天打卡，以及每周会轮值dxzm作为当周的小管家，发诗歌+当周诗歌打卡方式+每天的唱诗打卡提醒（+另外愿意多摆上一点鼓励加上赏析或个人对诗歌的感受）。
+        </p>
+        <h1 id="datetime"></h1>
+        <h1 style="text-align: center" id="weekday"></h1>
+        <div class="bs-example" data-example-id="simple-table">
             <table class="table">
-                <caption>Optional table caption.</caption>
+                <caption>原则上每天提醒和唱诗歌打卡不要晚于10点前后，有特殊情况的可以第二天补唱。
+                </caption>
                 <thead>
                 <tr>
                     <th>#</th>
-                    <th>姓名</th>
+                    <th>昵称</th>
                     <th>周一</th>
                     <th>周二</th>
                     <th>周三</th>
@@ -45,99 +25,33 @@
                     <th>周六</th>
                 </tr>
                 </thead>
-
                 <tbody>
-
-
-                <tr>
-                    <th scope="row">1</th>
-                    <td>
-                        jack
-                    </td>
-                    <td>
-                        <input class="form-check-input Mon" type="checkbox" name="punch" value="jack" >
-                    </td>
-                    <td>
-                        <input class="form-check-input Tue" type="checkbox" name="punch" value="jack">
-                    </td>
-                    <td>
-                        <input class="form-check-input Wed" type="checkbox" name="punch" value="jack">
-                    </td>
-                    <td>
-                        <input class="form-check-input Thu" type="checkbox" name="punch" value="jack">
-                    </td>
-                    <td>
-                        <input class="form-check-input Fri" type="checkbox" name="punch" value="jack">
-                    </td>
-                    <td>
-                        <input class="form-check-input Sat" type="checkbox" name="punch" value="jack">
-                    </td>
-                </tr>
-                <tr>
-                    <th scope="row">2</th>
-                    <td>
-                        pony
-                    </td>
-                    <td>
-                        <input class="form-check-input Mon" type="checkbox" name="punch" value="pony">
-                    </td>
-                    <td>
-                        <input class="form-check-input Tue" type="checkbox" name="punch" value="pony">
-                    </td>
-                    <td>
-                        <input class="form-check-input Wed" type="checkbox" name="punch" value="pony">
-                    </td>
-                    <td>
-                        <input class="form-check-input Thu" type="checkbox" name="punch" value="pony">
-                    </td>
-                    <td>
-                        <input class="form-check-input Fri" type="checkbox" name="punch" value="pony">
-                    </td>
-                    <td>
-                        <input class="form-check-input Sat" type="checkbox" name="punch" value="pony">
-                    </td>
-                </tr>
-
-                <tr>
-                    <th scope="row">3</th>
-                    <td>
-                        peter
-                    </td>
-                    <td>
-                        <input class="form-check-input Mon" type="checkbox" name="punch" value="peter">
-                    </td>
-                    <td>
-                        <input class="form-check-input Tue" type="checkbox" name="punch" value="peter">
-                    </td>
-                    <td>
-                        <input class="form-check-input Wed" type="checkbox" name="punch" value="peter">
-                    </td>
-                    <td>
-                        <input class="form-check-input Thu" type="checkbox" name="punch" value="peter">
-                    </td>
-                    <td>
-                        <input class="form-check-input Fri" type="checkbox" name="punch" value="peter">
-                    </td>
-                    <td>
-                        <input class="form-check-input Sat" type="checkbox" name="punch" value="peter">
-                    </td>
-                </tr>
 
 
                 </tbody>
             </table>
         </div>
-    </form>
+        <nav aria-label="Page navigation example">
+            <ul class="pagination justify-content-center">
+                <li class="page-item">
+                    <a class="page-link">上一周</a>
+                </li>
+                <li class="page-item"><a class="page-link" href="#">1</a></li>
+                <li class="page-item"><a class="page-link" href="#">2</a></li>
+                <li class="page-item"><a class="page-link" href="#">3</a></li>
+                <li class="page-item">
+                    <a class="page-link" href="#">下一周</a>
+                </li>
+            </ul>
+        </nav>
+    </div>
 </div>
 <hr>
 
-<form  action="/add"  id="addUser">
+<form action="/add" id="addUser">
     <input type="text" name="username" id="">
     <button>提交</button>
 </form>
-<script>
 
-</script>
-</body>
-</html>
+{{template "footer.html"}}
 {{end}}

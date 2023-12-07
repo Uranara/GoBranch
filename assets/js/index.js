@@ -3,11 +3,8 @@ $(document).ready(
         DataPost()
         showCheck()
         disCheck()
-
     }
 )
-
-
 
 function disCheck() {
     $("input[name ='punch']").prop("disabled", true)
@@ -40,23 +37,27 @@ function showCheck() {
                     let day = new Date(currentDate)
                     let week = day.getDay()
                     let year = day.getFullYear()
-                    let month = day.getMonth()
+                    let month = day.getMonth() + 1
                     let date = day.getDate()
                     const time = year + "-" + month + "-" +date
 
-                    if(dateCount[time]){
-                        dateCount[time] += 1
+                    const timeUser = time + "-" +username
+
+                    if(dateCount[timeUser]){
+                        dateCount[timeUser] += 1
                     }else{
-                        dateCount[time] = 1
+                        dateCount[timeUser] = 1
                     }
 
-
                     let inputs = $(`input[value=${username}]`)
+                    if(dateCount[timeUser]>1){
+                        $(inputs[week - 2]).prop("disabled", true).prop("checked", true)
+                    }
                     $(inputs[week - 1]).prop("disabled", true).prop("checked", true)
                 })
             }
 
-            console.log(dateCount)
         },
     )
 }
+

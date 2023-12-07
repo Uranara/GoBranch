@@ -1,0 +1,37 @@
+{{define "header.html"}}
+<html lang="zh">
+<head>
+  <meta charset="UTF-8">
+  <title>JesusNB</title>
+  <link rel="shortcut icon" href="../assets/images/icons8.png" type="image/x-icon"/>
+  <link rel="stylesheet" href="../assets/css/bootstrap.css">
+  <script src="../assets/js/jquery.min.js"></script>
+  <script src="../assets/js/bootstrap.js"></script>
+  <script src="../assets/js/common.js"></script>
+  <script src="../assets/js/index.js"></script>
+</head>
+<style rel="stylesheet">
+  .form-check {
+    padding-left: 25px;
+  }
+
+  .page-link {
+    color: #212529;
+  }
+
+  .form-check-input {
+    width: 20px;
+    height: 20px;
+  }
+</style>
+<nav class="navbar sticky-top navbar-light bg-dark">
+  <div class="container">
+    <a class="navbar-brand" href="/">
+      <img src="../assets/images/fish.png" width="32" height="32" class="d-inline-block align-top" alt="">
+      <span style="color: white"> Poetry Check </span>
+    </a>
+    <a class="btn btn-light" href="/login" role="button">登录</a>
+  </div>
+</nav>
+
+{{end}}

@@ -15,7 +15,7 @@ func main() {
 	r.LoadHTMLGlob("templates/*")
 	router.InitRouter(r)
 
-	err := r.Run(":88")
+	err := r.Run(":8080")
 	if err != nil {
 		log.Fatalln(err)
 	}
