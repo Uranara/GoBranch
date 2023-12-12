@@ -1,6 +1,7 @@
 {{define "index.html"}}
 {{template "header.html"}}
 
+<body>
 
 <div class="jumbotron jumbotron-fluid">
     <div class="container">
@@ -10,7 +11,7 @@
         <h1 id="datetime"></h1>
         <h1 style="text-align: center" id="weekday"></h1>
         <div class="bs-example" data-example-id="simple-table">
-            <table class="table">
+            <table class="table table-striped">
                 <caption>原则上每天提醒和唱诗歌打卡不要晚于10点前后，有特殊情况的可以第二天补唱。
                 </caption>
                 <thead>
@@ -26,6 +27,9 @@
                 </tr>
                 </thead>
                 <tbody>
+
+
+
 
 
                 </tbody>
@@ -46,12 +50,10 @@
         </nav>
     </div>
 </div>
-<hr>
 
-<form action="/add" id="addUser">
-    <input type="text" name="username" id="">
-    <button>提交</button>
-</form>
+
+</body>
+
 
 {{template "footer.html"}}
 {{end}}

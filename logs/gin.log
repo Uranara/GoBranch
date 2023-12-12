@@ -4,36 +4,86 @@
  - using env:	export GIN_MODE=release
  - using code:	gin.SetMode(gin.ReleaseMode)
 
-[GIN-debug] GET    /assets/*filepath         --> github.com/gin-gonic/gin.(*RouterGroup).createStaticHandler.func1 (3 handlers)
-[GIN-debug] HEAD   /assets/*filepath         --> github.com/gin-gonic/gin.(*RouterGroup).createStaticHandler.func1 (3 handlers)
-[GIN-debug] Loaded HTML Templates (2): 
+[GIN-debug] GET    /assets/*filepath         --> github.com/gin-gonic/gin.(*RouterGroup).createStaticHandler.func1 (4 handlers)
+[GIN-debug] HEAD   /assets/*filepath         --> github.com/gin-gonic/gin.(*RouterGroup).createStaticHandler.func1 (4 handlers)
+[GIN-debug] Loaded HTML Templates (6): 
 	- 
+	- addUser.html
+	- footer.html
+	- header.html
 	- index.html
+	- login.html
 
-[GIN-debug] GET    /                         --> Go/api.Index (3 handlers)
-[GIN-debug] GET    /add                      --> Go/api.Add (3 handlers)
-[GIN-debug] GET    /get                      --> Go/api.Find (3 handlers)
-[GIN-debug] GET    /delete                   --> Go/api.Delete (3 handlers)
-[GIN-debug] POST   /create                   --> Go/api.Create (3 handlers)
+[GIN-debug] GET    /                         --> Go/api.Index (4 handlers)
+[GIN-debug] GET    /createData               --> Go/api.CreateData (4 handlers)
+[GIN-debug] GET    /deleteData               --> Go/api.DeleteData (4 handlers)
+[GIN-debug] GET    /login                    --> Go/api.Login (4 handlers)
+[GIN-debug] GET    /addPage                  --> Go/api.AddPage (4 handlers)
+[GIN-debug] POST   /addUser                  --> Go/api.AddUser (4 handlers)
+[GIN-debug] GET    /searchUser               --> Go/api.SearchUser (4 handlers)
+[GIN-debug] GET    /showUser                 --> Go/api.ShowUser (4 handlers)
+[GIN-debug] GET    /showPunch                --> Go/api.ShowPunch (4 handlers)
+[GIN-debug] POST   /formPost                 --> Go/api.FormPost (4 handlers)
 [GIN-debug] [WARNING] You trusted all proxies, this is NOT safe. We recommend you to set a value.
 Please check https://pkg.go.dev/github.com/gin-gonic/gin#readme-don-t-trust-all-proxies for details.
-[GIN-debug] Listening and serving HTTP on :90
-[GIN] 2023/11/28 - 09:25:02 | 200 |      24.716ms |       127.0.0.1 | GET      "/"
-[GIN] 2023/11/28 - 09:25:08 | 302 |      7.5509ms |       127.0.0.1 | POST     "/create"
-[GIN] 2023/11/28 - 09:25:08 | 200 |     11.4283ms |       127.0.0.1 | GET      "/"
-[GIN] 2023/11/28 - 09:25:09 | 302 |      4.4926ms |       127.0.0.1 | POST     "/create"
-[GIN] 2023/11/28 - 09:25:09 | 200 |     11.7731ms |       127.0.0.1 | GET      "/"
-[GIN] 2023/11/28 - 09:25:10 | 302 |      4.8105ms |       127.0.0.1 | POST     "/create"
-[GIN] 2023/11/28 - 09:25:10 | 200 |     11.7496ms |       127.0.0.1 | GET      "/"
-[GIN] 2023/11/28 - 09:25:10 | 302 |      3.8546ms |       127.0.0.1 | POST     "/create"
-[GIN] 2023/11/28 - 09:25:10 | 200 |     11.4331ms |       127.0.0.1 | GET      "/"
-[GIN] 2023/11/28 - 09:25:34 | 200 |     12.9182ms |       127.0.0.1 | GET      "/"
-[GIN] 2023/11/28 - 09:25:35 | 302 |       4.087ms |       127.0.0.1 | POST     "/create"
-[GIN] 2023/11/28 - 09:25:35 | 200 |     11.5611ms |       127.0.0.1 | GET      "/"
-[GIN] 2023/11/28 - 09:25:36 | 302 |      4.6964ms |       127.0.0.1 | POST     "/create"
-[GIN] 2023/11/28 - 09:25:36 | 200 |      11.468ms |       127.0.0.1 | GET      "/"
-[GIN] 2023/11/28 - 09:25:37 | 302 |      4.4398ms |       127.0.0.1 | POST     "/create"
-[GIN] 2023/11/28 - 09:25:37 | 200 |     13.7973ms |       127.0.0.1 | GET      "/"
-[GIN] 2023/11/28 - 09:25:37 | 302 |      5.2503ms |       127.0.0.1 | POST     "/create"
-[GIN] 2023/11/28 - 09:25:37 | 200 |     13.0957ms |       127.0.0.1 | GET      "/"
-[GIN] 2023/11/28 - 09:29:35 | 200 |     13.8201ms |       127.0.0.1 | GET      "/"
+[GIN-debug] Listening and serving HTTP on :8080
+[GIN] 2023/12/12 - 17:22:09 | 200 |       928.3µs |       127.0.0.1 | GET      "/"
+[GIN] 2023/12/12 - 17:22:09 | 200 |     52.8833ms |       127.0.0.1 | GET      "/assets/js/common.js"
+[GIN] 2023/12/12 - 17:22:09 | 200 |      52.361ms |       127.0.0.1 | GET      "/assets/js/render.js"
+[GIN] 2023/12/12 - 17:22:09 | 200 |      52.361ms |       127.0.0.1 | GET      "/assets/js/index.js"
+[GIN] 2023/12/12 - 17:22:09 | 200 |     53.9209ms |       127.0.0.1 | GET      "/assets/js/jquery.min.js"
+[GIN] 2023/12/12 - 17:22:09 | 200 |     52.8833ms |       127.0.0.1 | GET      "/assets/js/bootstrap.js"
+[GIN] 2023/12/12 - 17:22:09 | 200 |     54.6568ms |       127.0.0.1 | GET      "/assets/css/bootstrap.css"
+[GIN] 2023/12/12 - 17:22:09 | 200 |         960µs |       127.0.0.1 | GET      "/assets/images/fish.png"
+[GIN] 2023/12/12 - 17:22:09 | 200 |            0s |       127.0.0.1 | GET      "/assets/images/icons8-fish-96.png"
+[GIN] 2023/12/12 - 17:22:09 | 200 |       374.1µs |       127.0.0.1 | GET      "/assets/images/icons8-go-48.png"
+[GIN] 2023/12/12 - 17:22:09 | 200 |       312.6µs |       127.0.0.1 | GET      "/assets/js/bootstrap.js.map"
+[GIN] 2023/12/12 - 17:22:09 | 200 |      1.0146ms |       127.0.0.1 | GET      "/assets/css/bootstrap.css.map"
+[GIN] 2023/12/12 - 17:22:09 | 200 |      1.8883ms |       127.0.0.1 | GET      "/showPunch"
+[GIN] 2023/12/12 - 17:22:09 | 200 |      3.0346ms |       127.0.0.1 | GET      "/showUser"
+[GIN] 2023/12/12 - 17:22:09 | 200 |       882.7µs |       127.0.0.1 | GET      "/searchUser?id=1"
+[GIN] 2023/12/12 - 17:22:09 | 200 |       1.122ms |       127.0.0.1 | GET      "/searchUser?id=2"
+[GIN] 2023/12/12 - 17:22:09 | 200 |       608.4µs |       127.0.0.1 | GET      "/searchUser?id=3"
+[GIN] 2023/12/12 - 17:22:09 | 200 |       531.9µs |       127.0.0.1 | GET      "/searchUser?id=2"
+[GIN] 2023/12/12 - 17:22:09 | 200 |       527.9µs |       127.0.0.1 | GET      "/searchUser?id=1"
+[GIN] 2023/12/12 - 17:22:09 | 200 |       570.5µs |       127.0.0.1 | GET      "/searchUser?id=3"
+[GIN] 2023/12/12 - 17:22:09 | 200 |       934.2µs |       127.0.0.1 | GET      "/assets/images/icons8.png"
+[GIN] 2023/12/12 - 17:22:12 | 200 |      1.2581ms |       127.0.0.1 | GET      "/"
+[GIN] 2023/12/12 - 17:22:12 | 304 |       183.9µs |       127.0.0.1 | GET      "/assets/js/index.js"
+[GIN] 2023/12/12 - 17:22:12 | 200 |       1.072ms |       127.0.0.1 | GET      "/showUser"
+[GIN] 2023/12/12 - 17:22:12 | 200 |       517.1µs |       127.0.0.1 | GET      "/showPunch"
+[GIN] 2023/12/12 - 17:22:12 | 200 |      1.1651ms |       127.0.0.1 | GET      "/searchUser?id=1"
+[GIN] 2023/12/12 - 17:22:12 | 200 |      1.0468ms |       127.0.0.1 | GET      "/searchUser?id=2"
+[GIN] 2023/12/12 - 17:22:12 | 200 |       1.552ms |       127.0.0.1 | GET      "/searchUser?id=3"
+[GIN] 2023/12/12 - 17:22:12 | 200 |       550.4µs |       127.0.0.1 | GET      "/searchUser?id=1"
+[GIN] 2023/12/12 - 17:22:12 | 200 |       566.3µs |       127.0.0.1 | GET      "/searchUser?id=2"
+[GIN] 2023/12/12 - 17:22:12 | 200 |       521.1µs |       127.0.0.1 | GET      "/searchUser?id=3"
+[GIN] 2023/12/12 - 17:22:13 | 200 |      1.2758ms |       127.0.0.1 | GET      "/"
+[GIN] 2023/12/12 - 17:22:13 | 200 |       961.3µs |       127.0.0.1 | GET      "/showUser"
+[GIN] 2023/12/12 - 17:22:13 | 200 |      1.0868ms |       127.0.0.1 | GET      "/showPunch"
+[GIN] 2023/12/12 - 17:22:13 | 200 |         665µs |       127.0.0.1 | GET      "/searchUser?id=1"
+[GIN] 2023/12/12 - 17:22:13 | 200 |       600.1µs |       127.0.0.1 | GET      "/searchUser?id=2"
+[GIN] 2023/12/12 - 17:22:13 | 200 |      1.1196ms |       127.0.0.1 | GET      "/searchUser?id=3"
+[GIN] 2023/12/12 - 17:22:13 | 200 |       573.2µs |       127.0.0.1 | GET      "/searchUser?id=2"
+[GIN] 2023/12/12 - 17:22:13 | 200 |      1.0984ms |       127.0.0.1 | GET      "/searchUser?id=1"
+[GIN] 2023/12/12 - 17:22:13 | 200 |       525.2µs |       127.0.0.1 | GET      "/searchUser?id=3"
+[GIN] 2023/12/12 - 17:22:46 | 200 |       985.9µs |       127.0.0.1 | GET      "/"
+[GIN] 2023/12/12 - 17:22:46 | 200 |       662.9µs |       127.0.0.1 | GET      "/assets/js/index.js"
+[GIN] 2023/12/12 - 17:22:46 | 200 |       784.2µs |       127.0.0.1 | GET      "/showUser"
+[GIN] 2023/12/12 - 17:22:46 | 200 |       722.9µs |       127.0.0.1 | GET      "/showPunch"
+[GIN] 2023/12/12 - 17:22:46 | 200 |      1.3664ms |       127.0.0.1 | GET      "/searchUser?id=1"
+[GIN] 2023/12/12 - 17:22:46 | 200 |       519.8µs |       127.0.0.1 | GET      "/searchUser?id=2"
+[GIN] 2023/12/12 - 17:22:46 | 200 |      1.0411ms |       127.0.0.1 | GET      "/searchUser?id=3"
+[GIN] 2023/12/12 - 17:22:46 | 200 |         522µs |       127.0.0.1 | GET      "/searchUser?id=1"
+[GIN] 2023/12/12 - 17:22:46 | 200 |       590.1µs |       127.0.0.1 | GET      "/searchUser?id=2"
+[GIN] 2023/12/12 - 17:22:46 | 200 |      1.7317ms |       127.0.0.1 | GET      "/searchUser?id=3"
+[GIN] 2023/12/12 - 17:22:47 | 200 |      1.5574ms |       127.0.0.1 | GET      "/"
+[GIN] 2023/12/12 - 17:22:47 | 304 |       138.2µs |       127.0.0.1 | GET      "/assets/js/index.js"
+[GIN] 2023/12/12 - 17:22:47 | 200 |       647.6µs |       127.0.0.1 | GET      "/showUser"
+[GIN] 2023/12/12 - 17:22:47 | 200 |       532.3µs |       127.0.0.1 | GET      "/showPunch"
+[GIN] 2023/12/12 - 17:22:47 | 200 |       529.7µs |       127.0.0.1 | GET      "/searchUser?id=2"
+[GIN] 2023/12/12 - 17:22:47 | 200 |       1.814ms |       127.0.0.1 | GET      "/searchUser?id=1"
+[GIN] 2023/12/12 - 17:22:47 | 200 |       1.581ms |       127.0.0.1 | GET      "/searchUser?id=3"
+[GIN] 2023/12/12 - 17:22:47 | 200 |      1.0524ms |       127.0.0.1 | GET      "/searchUser?id=2"
+[GIN] 2023/12/12 - 17:22:47 | 200 |         527µs |       127.0.0.1 | GET      "/searchUser?id=1"
+[GIN] 2023/12/12 - 17:22:47 | 200 |       594.9µs |       127.0.0.1 | GET      "/searchUser?id=3"
