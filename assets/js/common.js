@@ -6,7 +6,7 @@ function DataPost() {
         $(this).prop("disabled", true)
 
     })
-    formPOST("#addUser", "/add")
+    // formPOST("#addUser", "/addUser")
 }
 
 function formPOST(id, url) {
@@ -48,6 +48,10 @@ function updateDateTime() {
 
     const datetimeElement = document.getElementById('datetime');
     const weekElement = document.getElementById('weekday');
-    datetimeElement.textContent = formattedDateTime ;
-    weekElement.textContent = weekday;
+    if(datetimeElement && weekElement){
+        datetimeElement.textContent = formattedDateTime;
+        weekElement.textContent = weekday;
+    }
+
+
 }

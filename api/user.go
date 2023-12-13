@@ -17,6 +17,12 @@ type User struct {
 func AddUser(context *gin.Context) {
 	var user User
 	data := context.PostForm("username")
+	avatar, _ := context.FormFile("avatar")
+	avatar.Filename = data + ".jpg"
+	err := context.SaveUploadedFile(avatar, "./assets/avatars/"+avatar.Filename)
+	if err != nil {
+		return
+	}
 	user = User{
 		Model:   gorm.Model{},
 		Name:    data,

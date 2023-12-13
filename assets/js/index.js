@@ -2,12 +2,7 @@ $(document).ready(
     function () {
         updateDateTime()
         renderCheck()
-        disCheck()
-        DataPost()
-        showCheck()
         setInterval(delayUpdate, 1000);
-
-        console.log($('tbody'))
     }
 )
 
@@ -36,7 +31,6 @@ function showCheck() {
             for (let i = 0; i < punchList.length; i++) {
                 const userID = response["punches"][i]["UserID"]
                 let currentDate = response["punches"][i]["CreatedAt"]
-
 
                 fetch("/searchUser?id=" + userID).then(response => response.json()).then(function (response) {
                     const username = response["user"]

@@ -3,6 +3,7 @@ package api
 import (
 	"github.com/gin-gonic/gin"
 	"gorm.io/gorm"
+	"time"
 )
 
 type Punches struct {
@@ -13,7 +14,8 @@ type Punches struct {
 // ShowPunch show punch state
 func ShowPunch(context *gin.Context) {
 	var punches []Punches
-	DB.Find(&punches)
+	weekAgo := time.Now().AddDate(0, 0, -7)
+	DB.Where("created_at > ?", weekAgo).Find(&punches)
 	context.JSON(200, gin.H{
 		"punches": punches,
 	})
