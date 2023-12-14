@@ -18,8 +18,13 @@ func AddUser(context *gin.Context) {
 	var user User
 	data := context.PostForm("username")
 	avatar, _ := context.FormFile("avatar")
-	avatar.Filename = data + ".jpg"
-	err := context.SaveUploadedFile(avatar, "./assets/avatars/"+avatar.Filename)
+	if avatar != nil {
+		avatar.Filename = data + ".jpg"
+		err := context.SaveUploadedFile(avatar, "./assets/avatars/"+avatar.Filename)
+		if err != nil {
+			return
+		}
+	}
 	if err != nil {
 		return
 	}
